@@ -1,4 +1,3 @@
-/* ฟอนต์ + พื้นหลัง */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -7,7 +6,6 @@ body {
   color: white;
 }
 
-/* Navbar */
 nav {
   background: rgba(0,0,0,0.3);
   padding: 15px;
@@ -18,25 +16,16 @@ nav a {
   margin: 10px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #00c6ff;
-}
-
-/* Container */
 .container {
   margin-top: 40px;
 }
 
-/* Score + Time */
 .info {
   font-size: 20px;
-  margin: 20px;
 }
 
-/* พื้นที่เกม */
 #gameArea {
   width: 400px;
   height: 400px;
@@ -44,41 +33,31 @@ nav a:hover {
   position: relative;
   border-radius: 15px;
   background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
   border: 2px solid #00c6ff;
 }
 
-/* กล่อง */
 .box {
   width: 50px;
   height: 50px;
   position: absolute;
   cursor: pointer;
   border-radius: 10px;
-  transition: transform 0.1s;
+  background: red;
+  transition: 0.1s;
 }
 
 .box:hover {
   transform: scale(1.1);
 }
 
-/* ปุ่ม */
 .btn {
   padding: 12px 25px;
-  margin-top: 20px;
   background: #00c6ff;
   border: none;
   border-radius: 30px;
-  font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.btn:hover {
-  background: white;
-}
-
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -95,16 +74,13 @@ nav a:hover {
   background: #1e3c50;
   padding: 30px;
   border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,198,255,0.5);
+}
+.btn.exit {
+  background: #ff4d4d;
+  color: white;
+  margin-left: 10px;
 }
 
-/* เอฟเฟกต์เด้ง */
-.modal-content {
-  animation: pop 0.3s ease;
-}
-
-@keyframes pop {
-  from { transform: scale(0.7); }
-  to { transform: scale(1); }
+.btn.exit:hover {
+  background: #ff1a1a;
 }

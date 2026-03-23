@@ -9,9 +9,12 @@ function randomColor() {
   return "#" + Math.floor(Math.random()*16777215).toString(16);
 }
 
-// สร้างกล่อง
+// สร้างกล่อง (แก้ bug แล้ว)
 function spawnBox() {
   if (timeLeft <= 0) return;
+
+  let oldBox = document.querySelector(".box");
+  if (oldBox) oldBox.remove();
 
   let box = document.createElement("div");
   box.classList.add("box");
@@ -28,16 +31,16 @@ function spawnBox() {
 
     score++;
     document.getElementById("score").innerText = score;
+
     spawnBox();
   };
 
-  gameArea.innerHTML = "";
   gameArea.appendChild(box);
 }
 
 // เริ่มเกม
 function startGame() {
-  clearInterval(timer); // กันกดซ้ำ
+  clearInterval(timer);
 
   score = 0;
   timeLeft = 10;
@@ -80,4 +83,18 @@ function endGame() {
 // เล่นใหม่
 function restartGame() {
   startGame();
+}
+function exitGame() {
+  // ซ่อน popup
+  document.getElementById("gameOverModal").style.display = "none";
+
+  // ล้างกล่องเกม
+  gameArea.innerHTML = "";
+
+  // รีเซ็ตค่า
+  document.getElementById("score").innerText = 0;
+  document.getElementById("time").innerText = 10;
+
+  // หยุด timer
+  clearInterval(timer);
 }
