@@ -2,30 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Click Box Game</title>
-  <link rel="stylesheet" href="css/style.css">
-   <nav>
+  <title>Game</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+
+<!-- Navbar เหมือน Home -->
+<nav>
   <a href="index.html">Home</a>
   <a href="game.html">Game</a>
   <a href="cv.html">CV</a>
 </nav>
-</head>
-<body>
 
-<h1>Click the Box Game</h1>
+<div class="container">
 
-<div class="info">
-  <p>Score: <span id="score">0</span></p>
-  <p>Time: <span id="time">10</span></p>
+  <h1>🎮 Click the Box Game</h1>
+
+  <div class="info">
+    <p>Score: <span id="score">0</span></p>
+    <p>Time: <span id="time">10</span></p>
+  </div>
+
+  <div id="gameArea"></div>
+
+  <button onclick="startGame()" class="btn">Start Game</button>
+
 </div>
 
-<div id="gameArea"></div>
-
-<button onclick="startGame()">Start Game</button>
-
 <script src="js/game.js"></script>
+<!-- Game Over Popup -->
+<div id="gameOverModal" class="modal">
+  <div class="modal-content">
+    <h2>🎮 Game Over</h2>
+    <p>Your Score: <span id="finalScore"></span></p>
+    <p>High Score: <span id="highScore"></span></p>
+    <button onclick="restartGame()" class="btn">🔄 Play Again</button>
+  </div>
+</div>
+
+
 </body>
 </html>
-
-
-</head>
