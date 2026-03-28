@@ -4,6 +4,11 @@ let timer;
 let gameArea = document.getElementById("gameArea");
 let highScore = localStorage.getItem("highScore") || 0;
 
+// เริ่มเกม
+function startGame() {
+  score = 0;
+}
+
 // สุ่มสี
 function randomColor() {
   return "#" + Math.floor(Math.random()*16777215).toString(16);

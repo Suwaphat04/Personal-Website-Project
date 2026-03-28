@@ -122,3 +122,35 @@ footer {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  #gameArea {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cv-container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .profile {
+    width: 120px;
+    height: 120px;
+  }
+}
+
