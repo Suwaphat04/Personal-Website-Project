@@ -72,8 +72,11 @@ nav a {
 
 .modal-content {
   background: #1e3c50;
+  color: white;
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px;
+  text-align: center;
+
 }
 .btn.exit {
   background: #ff4d4d;
